@@ -1,6 +1,7 @@
 import React from 'react'
 import Bgimage from '../../src/assets/bg-slate.png'
 import blackCoffee from '../../src/assets/black.png'
+import Navbar from './Navbar';
 
 const bgimage = {
     backgroundImage: `url(${Bgimage})`,
@@ -15,9 +16,9 @@ const Hero = () => {
     <main style={bgimage}>
         <section className=' min-h-[750px] w-full'>
             <div className='container'>
-                
+                <Navbar />
                 <div className='grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 place-items-center min-h-[850px]'>
-                    <div className='text-[#F1DABF] mt-[100px] md:mt-0 p-4 space-y-28'>
+                    <div className='text-[#F1DABF] mt-[100px] md:mt-0 p-1 space-y-28'>
                         <h1 className='text-7xl font-bold leading-tight ml-14'>Coders Cafe</h1>
                         <div className='relative'> 
                             <div className='relative z-10 space-y-4'>
