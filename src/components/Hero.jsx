@@ -1,8 +1,14 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Bgimage from '../../src/assets/bg-slate.png'
 import blackCoffee from '../../src/assets/black.png'
 import Navbar from './Navbar';
 import {motion} from "framer-motion"
+import { FaFacebookF } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa";
+import { FlatESLint } from 'eslint/use-at-your-own-risk';
+
 
 const bgimage = {
     backgroundImage: `url(${Bgimage})`,
@@ -13,11 +19,12 @@ const bgimage = {
 
 const Hero = () => {
 
+ const [sidebar, setsidebar] = useState(false);
   return (
     <main style={bgimage}>
         <section className=' min-h-[750px] w-full'>
             <div className='container'>
-                <Navbar />
+                <Navbar sidebar={sidebar} setsidebar={setsidebar}/>
                 <div className='grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 place-items-center min-h-[850px]'>
                     <div className='text-[#F1DABF] mt-[100px] md:mt-0 p-1 space-y-28'>
                         <motion.h1 
@@ -106,6 +113,19 @@ const Hero = () => {
                     </motion.div>
                 </div>
             </div>
+            {
+                sidebar && (
+                    <div className='absolute top-0 right-0 z-10 w-[150px] h-full bg-gradient-to-b from-[#C87F12] to-primary/60 backdrop-blur-sm'>
+                <div className='text-white w-full h-full flex  flex-col items-center justify-center gap-5 text-2xl'>
+                    <div className='w-[1px] h-[70px] bg-white'></div>
+                    <div className='border-[1.5px] border-b-gray-50 rounded-full p-[6px]'><FaFacebookF/></div>
+                    <div className='border-[1.5px] border-b-gray-50 rounded-full p-[6px]'><FaInstagram/></div>
+                    <div className='border-[1.5px] border-b-gray-50 rounded-full p-[6px]'><FaTwitter/></div>
+                    <div className='w-[1px] h-[70px] bg-white'></div>
+                    </div>
+                </div>
+                )
+            }
         </section> 
     </main>
   )
