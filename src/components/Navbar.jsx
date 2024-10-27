@@ -1,4 +1,4 @@
-
+"use client";
 import React from 'react'
 import { SlMenu } from "react-icons/sl";
 import {motion} from "framer-motion"
@@ -17,7 +17,7 @@ const Navbar = ({sidebar, setsidebar}) => {
                     damping:10,
                     delay:0.6
                  }}
-                className='text-2xl font-semibold uppercase flex gap-3'>
+                className='text-2xl font-semibold uppercase flex gap-3 font-font1'>
                     <span className='text-[#F1DABF]'>Byte</span>
                     <span>&</span>
                     <span className='text-primary'>Brew</span>

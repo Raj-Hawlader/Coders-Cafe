@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from 'react'
 import Bgimage from '../../src/assets/bg-slate.png'
 import blackCoffee from '../../src/assets/black.png'
@@ -7,7 +7,6 @@ import {motion} from "framer-motion"
 import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
-import { FlatESLint } from 'eslint/use-at-your-own-risk';
 
 
 const bgimage = {
@@ -22,9 +21,9 @@ const Hero = () => {
  const [sidebar, setsidebar] = useState(false);
   return (
     <main style={bgimage}>
-        <section className=' min-h-[750px] w-full'>
+        <section className=' min-h-[750px] w-full font-font1'>
             <div className='container'>
-                <Navbar sidebar={sidebar} setsidebar={setsidebar}/>
+            <Navbar sidebar={sidebar} setsidebar={setsidebar} />
                 <div className='grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 place-items-center min-h-[850px]'>
                     <div className='text-[#F1DABF] mt-[100px] md:mt-0 p-1 space-y-28'>
                         <motion.h1 
@@ -48,7 +47,7 @@ const Hero = () => {
                          }}
                         className='relative'> 
                             <div className='relative z-10 space-y-4'>
-                                <h1 className='text-2xl'>Blvck Tumbler</h1>  
+                                <h1 className='text-2xl '>Blvck Tumbler</h1>  
                                 <h1 className='text-sm opacity-55 leading-loose'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus aspernatur, cumque eos neque dolorem architecto deserunt quis voluptatibus in quisquam quia ducimus!</h1>
                             </div>
                             <div className='absolute -top-6 -left-10 w-[250px] h-[190px] bg-gray-700/25'></div>
@@ -56,8 +55,6 @@ const Hero = () => {
                     </div>
                     <div className='relative'>
                         <motion.img
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
                         initial={{ opacity: 0, scale:0 }}
                         animate={{ opacity: 1, scale:1 }}
                         transition={{ 
@@ -89,7 +86,7 @@ const Hero = () => {
                                 damping:10,
                                 delay:.8
                              }}
-                            className='text-[145px] scale-150 font-bold text-[#1A1F25]/50 leading-none'>Blvck Tumbler</motion.h1>
+                            className='text-[165px] scale-150 font-bold text-[#1A1F25]/30 leading-none '>Blvck Tumbler</motion.h1>
                         </div>
                     </div>
                     <motion.div 
@@ -101,7 +98,7 @@ const Hero = () => {
                         damping:10,
                         delay:1
                      }}
-                    className='text-[#F1DABF] mt-[100px] md:mt-0 p-4 space-y-28'>
+                    className='text-[#F1DABF] mt-[100px] md:mt-0 p-4 space-y-28 font-font1'>
                         <h1 className='opacity-0 text-7xl font-bold leading-tight ml-14'>Coders Cafe</h1>
                         <div className='relative'> 
                             <div className='relative z-10 space-y-4'>
@@ -115,15 +112,18 @@ const Hero = () => {
             </div>
             {
                 sidebar && (
-                    <div className='absolute top-0 right-0 z-10 w-[150px] h-full bg-gradient-to-b from-[#C87F12] to-primary/60 backdrop-blur-sm'>
-                <div className='text-white w-full h-full flex  flex-col items-center justify-center gap-5 text-2xl'>
-                    <div className='w-[1px] h-[70px] bg-white'></div>
-                    <div className='border-[1.5px] border-b-gray-50 rounded-full p-[6px]'><FaFacebookF/></div>
-                    <div className='border-[1.5px] border-b-gray-50 rounded-full p-[6px]'><FaInstagram/></div>
-                    <div className='border-[1.5px] border-b-gray-50 rounded-full p-[6px]'><FaTwitter/></div>
-                    <div className='w-[1px] h-[70px] bg-white'></div>
+                <motion.div 
+                initial={{ y: 100 }}
+                animate={{ y: 0 }}
+                className='absolute top-0 right-0 z-10 w-[150px] h-full bg-gradient-to-b from-[#C87F12] to-primary/60 backdrop-blur-sm'>
+                    <div className='text-white w-full h-full flex  flex-col items-center justify-center gap-5 text-2xl'>
+                        <div className='w-[1px] h-[70px] bg-white'></div>
+                        <div className='border-[1.5px] border-b-gray-50 rounded-full p-[6px]'><FaFacebookF/></div>
+                        <div className='border-[1.5px] border-b-gray-50 rounded-full p-[6px]'><FaInstagram/></div>
+                        <div className='border-[1.5px] border-b-gray-50 rounded-full p-[6px]'><FaTwitter/></div>
+                        <div className='w-[1px] h-[70px] bg-white'></div>
                     </div>
-                </div>
+                </motion.div>
                 )
             }
         </section> 

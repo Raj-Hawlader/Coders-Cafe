@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        font1: ["Kanit", "sans-serif"],
+      },
       colors:{
         primary:"#f97316",
         secondary:"#64748b",
