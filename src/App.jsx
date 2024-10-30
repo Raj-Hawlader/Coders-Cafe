@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Service from './components/Service'
 import Order from './components/Order'
 import Playstore from './components/Playstore'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Service/>
       <Order/>
       <Playstore/>
+      <Footer/>
     </>
   )
 }
